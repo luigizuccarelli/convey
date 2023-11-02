@@ -1,10 +1,10 @@
 extern crate pnet;
 
 use pnet::datalink::{linux, NetworkInterface};
-use pnet::packet::ip::IpNextHeaderProtocols;
-use pnet::packet::ipv4::MutableIpv4Packet;
-use pnet::packet::tcp::MutableTcpPacket;
-use pnet::packet::{tcp, Packet};
+//use pnet::packet::ip::IpNextHeaderProtocols;
+//use pnet::packet::ipv4::MutableIpv4Packet;
+//use pnet::packet::tcp::MutableTcpPacket;
+//use pnet::packet::Packet;
 use socket2::{Domain, SockAddr, Socket, Type};
 use std::net::{IpAddr, Ipv4Addr, SocketAddr};
 
@@ -14,7 +14,7 @@ pub const HEALTH_PORT_UPPER: u16 = 33767;
 pub const EPHEMERAL_PORT_LOWER: u16 = 33768;
 pub const EPHEMERAL_PORT_UPPER: u16 = 61000;
 pub const IPV4_HEADER_LEN: usize = 20;
-pub const TCP_HEADER_LEN: usize = 32;
+//pub const TCP_HEADER_LEN: usize = 32;
 
 // leave for reference
 // pub const ETHERNET_HEADER_LEN: usize = 14;
