@@ -20,7 +20,7 @@ pub struct StatsMssg {
     pub servers: Option<HashMap<String, bool>>,
 }
 
-#[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
+#[derive(Serialize, Deserialize)]
 pub struct StatsApi {
     stats: Arc<RwLock<Stats>>,
 }

@@ -26,6 +26,7 @@ pub struct Client {
     pub port: u16,
 }
 
+#[allow(dead_code)]
 #[derive(Clone, Debug)]
 pub struct Connection {
     // Client tcp address
@@ -41,6 +42,7 @@ pub struct Connection {
 
 // LB represents a single loadbalancer function, listening for an Address
 // and scheduling packets on a pool of backend servers
+#[allow(dead_code)]
 #[derive(Clone)]
 pub struct LB {
     // Loadbalancer name.  Maps to frontend name in the config
@@ -84,6 +86,7 @@ pub struct LB {
     pub stats_update_frequency: u64,
 }
 
+#[allow(dead_code)]
 pub struct Processed<'a> {
     pub pkt_stats: StatsMssg,
     pub ip_header: &'a mut MutableIpv4Packet<'a>,

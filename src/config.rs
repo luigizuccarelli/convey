@@ -54,9 +54,12 @@ pub struct Passthrough {
 
 #[derive(Debug)]
 pub enum ReadError {
-    IOError(IOError),
-    ParseError(Vec<toml::de::Error>),
-    DecodeError(toml::de::Error),
+    //IOError(IOError),
+    IOError(()),
+    //ParseError(Vec<toml::de::Error>),
+    ParseError(()),
+    //DecodeError(toml::de::Error),
+    DecodeError(()),
 }
 
 impl Config {
@@ -116,20 +119,23 @@ fn load_config(filename: &str) -> Result<BaseConfig, ReadError> {
 }
 
 impl From<IOError> for ReadError {
-    fn from(e: IOError) -> ReadError {
-        ReadError::IOError(e)
+    fn from(_e: IOError) -> ReadError {
+        //ReadError::IOError(e)
+        ReadError::IOError(())
     }
 }
 
 impl From<toml::de::Error> for ReadError {
-    fn from(e: toml::de::Error) -> ReadError {
-        ReadError::DecodeError(e)
+    fn from(_e: toml::de::Error) -> ReadError {
+        //ReadError::DecodeError(e)
+        ReadError::DecodeError(())
     }
 }
 
 impl From<Vec<toml::de::Error>> for ReadError {
-    fn from(e: Vec<toml::de::Error>) -> ReadError {
-        ReadError::ParseError(e)
+    fn from(_e: Vec<toml::de::Error>) -> ReadError {
+        //ReadError::ParseError(e)
+        ReadError::ParseError(())
     }
 }
 

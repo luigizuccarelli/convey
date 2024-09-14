@@ -1,4 +1,4 @@
-.PHONY: all test build clean
+.PHONY: all test build clean clean-all
 
 all: clean test build
 
@@ -27,3 +27,7 @@ run:
 
 clean:
 	rm -rf cargo-test*
+
+clean-all:
+	rm -rf cargo-test*
+	cargo clean
