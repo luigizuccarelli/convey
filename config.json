@@ -1,4 +1,5 @@
 {
   "Files": ["lb-setup.toml"],
-  "Args": ["--config","lb-setup.toml"]
+  "Args": ["--config","lb-setup.toml"],
+  "RebootOnExit": true
 }
