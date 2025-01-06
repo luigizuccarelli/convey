@@ -5,10 +5,10 @@ all: clean test build
 LEVEL ?= "info"
 TEST ?= ""
 
-build: clean 
+build-dev: clean 
 	cargo build
 
-build-release: clean
+build: clean
 	cargo build --release
 
 test: clean

@@ -6,18 +6,11 @@ backend = "tcp9000_out"
   health_check_interval = 3
   [backends.tcp9000_out.servers]
     [backends.tcp9000_out.servers.server1]
-    addr = "192.168.1.123:3030"
+    addr = "192.168.1.123:1337"
     weight = 1
     [backends.tcp9000_out.servers.server2]
-    addr = "192.168.1.45:3030"
+    addr = "192.168.1.45:1337"
     weight = 1
-    [backends.tcp9000_out.servers.server3]
-    addr = "192.168.1.123:3031"
-    weight = 1
-    [backends.tcp9000_out.servers.server4]
-    addr = "192.168.1.45:3031"
-    weight = 1
-
 
 [stats]
 port = "7000"
